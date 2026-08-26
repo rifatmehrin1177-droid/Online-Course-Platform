@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BUP Online Course Platform</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: whitesmoke;
+            color: black;
+        }
+        header{
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+        header h1{
+            margin: 0;
+            font-size: 28px;
+        }
+        header p{
+            margin: 5px;
+            font-size: 15px;
+        }
+        nav{
+            background-color: white;
+            padding: 11px;
+            border-bottom: 2px solid lightgray;
+        }
+        nav ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: darkgreen;
+            font-weight: bold;
+        }
+        nav ul li a:hover{
+            color: red;
+        }
+        .hero{
+            width: 90%;
+            margin: 12px auto;
+            background-color: lightgreen;
+            text-align: center;
+            padding: 15px;
+        }
+        .hero h2{
+            margin: 0 0 8px;
+            color: darkgreen;
+            font-size: 24px;
+        }
+        .hero p{
+            margin: 5px;
+            font-size: 14px;
+        }
+        .search-box{
+            width: 55%;
+            padding: 9px;
+            border: 1px solid gray;
+            font-size: 14px;
+        }
+        .course-section{
+            width: 90%;
+            margin: 12px auto;
+        }
+        .course-section h2{
+            color: darkgreen;
+            border-bottom: 2px solid lightgreen;
+            padding-bottom: 5px;
+        }
+        .course-grid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        .course-card{
+            position: relative;
+            background-color: white;
+            border: 1px solid lightgray;
+            padding: 12px;
+        }
+        .course-card:hover{
+            background-color: honeydew;
+            border-color: green;
+        }
+        .course-card img{
+            width: 100%;
+            height: 90px;
+            object-fit: cover;
+            border: 1px solid lightgray;
+        }
+        .course-card h3{
+            color: darkgreen;
+            font-size: 17px;
+            margin: 8px 0;
+        }
+        .course-info{
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            font-size: 14px;
+            margin: 7px 0;
+        }
+        .course-card p{
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 6px 0;
+        }
+        .price{
+            color: darkgreen;
+            font-weight: bold;
+            font-size: 15px !important;
+        }
+        .enroll-button{
+            display: inline-block;
+            background-color: darkgreen;
+            color: white;
+            padding: 7px 13px;
+            text-decoration: none;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+        .enroll-button:hover{
+            background-color: green;
+        }
+        .popular{
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            background-color: orange;
+            color: white;
+            padding: 5px 8px;
+            font-size: 10px;
+            border-radius: 4px;
+        }
+        .description{
+            width: 90%;
+            margin: 12px auto;
+            background-color: white;
+            border: 1px solid lightgray;
+            padding: 12px;
+        }
+        .description img{
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 8px;
+        }
+        .description h2{
+            color: darkgreen;
+            margin-top: 0;
+        }
+        .description p{
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .clear{
+            clear: both;
+        }
+        footer{
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 12px;
+        }
+        footer p{
+            margin: 3px;
+            font-size: 12px;
+        }
+        @media(max-width: 800px){
+            nav ul{
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            .course-grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media(max-width: 500px){
+            .course-grid{
+                grid-template-columns: 1fr;
+            }
+            .search-box{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bangladesh University of Professionals</h1>
+        <p>Online Course Platform</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Instructors</a></li>
+            <li><a href="#">My Courses</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <h2>Learn New Skills Online</h2>
+        <p>Explore courses and improve your knowledge with BUP Online Learning.</p>
+        <input type="text" class="search-box" placeholder="Search for a course...">
+    </section>
+    <section class="course-section">
+        <h2>Available Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <div class="popular">Popular</div>
+                <img src="c:\Users\HP\Pictures\Screenshots\Screenshot 2026-08-26 211821.png" alt="Course Image">
+                <h3>Web Technology</h3>
+                <p><strong>Instructor:</strong> Md. Istakiak Adnan Palash</p>
+                <div class="course-info">
+                    <span>Duration: 8 Weeks</span>
+                    <span>Beginner</span>
+                </div>
+                <p class="price">Price: 2500 BDT</p>
+                <a href="#" class="enroll-button">Enroll Now</a>
+            </div>
+            <div class="course-card">
+                <img src="c:\Users\HP\Pictures\Screenshots\Screenshot 2026-08-26 212005.png" alt="Course Image">
+                <h3>Telecommunication Systems</h3>
+                <p><strong>Instructor:</strong> Md. Maynul Islam</p>
+                <div class="course-info">
+                    <span>Duration: 10 Weeks</span>
+                    <span>Beginner</span>
+                </div>
+                <p class="price">Price: 3000 BDT</p>
+                <a href="#" class="enroll-button">Enroll Now</a>
+            </div>
+            <div class="course-card">
+                <img src="c:\Users\HP\Pictures\Screenshots\Screenshot 2026-08-26 212053.png" alt="Course Image">
+                <h3>Database Management System</h3>
+                <p><strong>Instructor:</strong> Sharmeen Jahan Seema</p>
+                <div class="course-info">
+                    <span>Duration: 6 Weeks</span>
+                    <span>Intermediate</span>
+                </div>
+                <p class="price">Price: 2200 BDT</p>
+                <a href="#" class="enroll-button">Enroll Now</a>
+            </div>
+            <div class="course-card">
+                <div class="popular">Popular</div>
+                <img src="c:\Users\HP\Pictures\Screenshots\Screenshot 2026-08-26 212209.png" alt="Course Image">
+                <h3>Artificial Intelligence</h3>
+                <p><strong>Instructor:</strong> Md. Sazzadul Islam Prottasha</p>
+                <div class="course-info">
+                    <span>Duration: 12 Weeks</span>
+                    <span>Advanced</span>
+                </div>
+                <p class="price">Price: 4000 BDT</p>
+                <a href="#" class="enroll-button">Enroll Now</a>
+            </div>
+            <div class="course-card">
+                <img src="c:\Users\HP\Pictures\Screenshots\Screenshot 2026-08-26 212328.png" alt="Course Image">
+                <h3>Data Communication and Computer Networks</h3>
+                <p><strong>Instructor:</strong> Dr. Rashed Mazumder</p>
+                <div class="course-info">
+                    <span>Duration: 8 Weeks</span>
+                    <span>Intermediate</span>
+                </div>
+                <p class="price">Price: 3200 BDT</p>
+                <a href="#" class="enroll-button">Enroll Now</a>
+            </div>
+            <div class="course-card">
+                <div class="popular">Popular</div>
+                <img src="c:\Users\HP\Pictures\Screenshots\Screenshot 2026-08-26 212529.png" alt="Course Image">
+                <h3>Software and Requirment Engineering</h3>
+                <p><strong>Instructor:</strong> Nazneen Akhter</p>
+                <div class="course-info">
+                    <span>Duration: 7 Weeks</span>
+                    <span>Intermediate</span>
+                </div>
+                <p class="price">Price: 4000 BDT</p>
+                <a href="#" class="enroll-button">Enroll Now</a>
+            </div>
+            <div class="course-card">
+                <img src="c:\Users\HP\Pictures\Screenshots\Screenshot 2026-08-26 212902.png" alt="Course Image">
+                <h3>Mathematics-II (Ordinary and partial Differential Equations)</h3>
+                <p><strong>Instructor:</strong> Dr. Mohammad Babul Hasan</p>
+                <div class="course-info">
+                    <span>Duration: 10 Weeks</span>
+                    <span>Advanced</span>
+                </div>
+                <p class="price">Price: 3500 BDT</p>
+                <a href="#" class="enroll-button">Enroll Now</a>
+            </div>
+            <div class="course-card">
+                <img src="c:\Users\HP\Pictures\Screenshots\Screenshot 2026-08-26 212946.png" alt="Course Image">
+                <h3>Natural Language Processing</h3>
+                <p><strong>Instructor:</strong> Md. Appel Mahmud Pranto</p>
+                <div class="course-info">
+                    <span>Duration: 9 Weeks</span>
+                    <span>Advanced</span>
+                </div>
+                <p class="price">Price: 3800 BDT</p>
+                <a href="#" class="enroll-button">Enroll Now</a>
+            </div>
+        </div>
+    </section>
+    <section class="description">
+    <img src="c:\Users\HP\Pictures\Screenshots\Screenshot 2026-08-26 213102.png" alt="Online Learning">
+    <h2>About Our Courses</h2>
+    <p>Our online courses provide students with practical knowledge in Web Technology, Telecommunication Systems, Database Management System, Artificial Intelligence, Data Communication and Computer Networks, Software and Requirement Engineering, Mathematics and Natural Language Processing.</p>
+    <p>Each course provides structured learning materials, experienced instructors and practical activities to help students improve their technical knowledge.</p>
+    <div class="clear"></div>
+</section>
+    <footer>
+        <p>All Rights Reserved © BUP, 2026</p>
+        <p>Online Course Platform | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
